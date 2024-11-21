@@ -1,25 +1,16 @@
-# Title of the project
+# Instrumenting Go Application Metrics with Prometheus
 
-Description of the project.
-
-**Tutorial**: [Link to corresponding BetterStack tutorial]()
-
-![Screenshot or GIF of the application in action](screenshot.png)
+**Tutorial**:
+[Instrumenting Go Application Metrics with Prometheus](https://betterstack.com/community/guides/monitoring/prometheus-golang-metrics/)
 
 ## 🟢 Prerequisites
 
-A list of requirements and package versions that the reader needs to build and
-run the project.
-
-- The first thing.
-- The second thing.
-
-## 📦 Getting started
-
-A brief guide to setting up the project.
-
-- Do the first thing.
-- Do the next thing.
+- Prior Go development experience and a
+  [recent version](https://go.dev/doc/install) installed.
+- Familiarity with [Docker](https://www.docker.com/) and [Docker
+  Compose][docker-compose-getting-started].
+- Basic familiarity with the
+  [Prometheus metric types](https://betterstack.com/community/guides/monitoring/prometheus-metrics-explained/).
 
 ## ⚖ License
 
