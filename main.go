@@ -3,7 +3,14 @@ package main
 import (
 	"log"
 	"net/http"
+	"os"
+
+	"github.com/joho/godotenv"
 )
+
+func init() {
+	_ = godotenv.Load()
+}
 
 func main() {
 	mux := http.NewServeMux()
@@ -16,9 +23,14 @@ func main() {
 		w.Write([]byte("Hello world!"))
 	})
 
-	log.Println("Starting HTTP server on port 8000")
+	port := os.Getenv("PORT")
+	if port == "" {
+		port = "8000"
+	}
 
-	if err := http.ListenAndServe(":8000", mux); err != nil {
+	log.Println("Starting HTTP server on port", port)
+
+	if err := http.ListenAndServe(":"+port, mux); err != nil {
 		log.Fatal("Server failed to start:", err)
 	}
 }
